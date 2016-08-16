@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>	
+</head>
+<body>
+<script type="text/javascript">
+function createOrder(){
+	coffe=document.forms[0].coffe
+	txt=""
+	for (i=0;i<coffe.length;++ i){
+		if (coffe[i].value + "")
+	}
+}
+
+document.getElementById("order").value="order"
+}
+function check(){
+	document.getElementById("myCheck").checked=true
+}
+function uncheck(){
+	document.getElementById("myCheck").checked=false
+}
+	var hari_ini= new Date()
+	var tahun = hari_ini.getYear()
+	var bulan = hari_ini.getMonth()+1
+	var tanggal = hari_ini.getDate()
+
+	document.write("Tanggal hari ini: ")
+	document.write(tanggal+"/"+bulan+"/"+tahun)
+</script>
+</body>
+<body>
+<form>	
+<input type="checkbox" id="myCheck" />
+<input type="button" onclick="check()" value="Check Checkbox" />
+<input type="button" onclick="uncheck()" value="Unchek Checkbox" />
+</form>
+</script>
+</head>
+<body>
+<p>How wold you like your?</p>
+<form>
+	<input type="checkbox" name="coffe" value="cream">With cream<br />
+	<input type="checkbox" name="coffe" value="sugar">With sugar<br />
+	<br />
+	<input type="button" onclick="createOrder()" value="Send order">
+	<br /><br />
+	
+</form>	
+</body>
+</script>
+
+</body>
+</html>

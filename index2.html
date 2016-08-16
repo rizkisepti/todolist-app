@@ -1,0 +1,31 @@
+<html>
+<body>
+
+<p>Silahkan masukan nomor 1 sampai 10:</p>
+
+<input id="numb" type="number"./>
+
+<button type="button"onclick="fungsiku()">submit</button>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12"><div id="mpo"></div></div>
+	</div>
+</div>
+<p id="angka"></p>
+
+<script>
+function fungsiku(){
+	var x,text;
+
+	//jika x merupakan bukan sebuah angka,field input kosong,angka yang dimasukkan kurang dari 1 atau lebih dari 10 maka akan ada keterangan "input tidak valid"
+	if(isNaN(X)|| x <1||x>10){
+		text="inputan tidak valid";
+	}else{
+		text="input valid"
+	}
+	document.getElementByld("angka").innerHTML = text;
+}
+</script>
+
+</body>
+</html>

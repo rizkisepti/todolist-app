@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Limitasi Text Input</title>
+	
+</head>
+<body>
+<form method="post" action="">
+<textarea id="area" onkeyup="cek()" cols="50" rows="10"></textarea></<br>
+<input type="submit" value="submit">
+<input type="reset" onclick="kosongi()">
+</form>
+<div id="notif"></body>
+<script>
+var target=document.getElementById ("area");
+var batas_karakter=100;
+function cek(){
+	//jika karekter yang diketik lebih dari atau sama dengan 100
+	if (terget.value.length >= batas_karakter ) {
+		//disable textarea
+		target.readOnly=true;
+		//memberikan warna merah pada text pemberitahuan
+		document.getElementById("notif").style.color="red";
+		//menampilkan pemberitahuan
+		document.getElementById("notif").innerHTML="maksimal 100 karakter !";
+	}else{
+		//hitung jumlah karakter yang sudah diketik
+		var jumlah_karakter=target.value.length;
+		//untuk mengetahui jumlah karakter yang tersisa,maka batas_karakter dikurangi karakter yang telah diketik
+		var sisa=batas_karakter-jumlah_karakter;
+		//tampilkan pemberitahuan berapa karakter lagi yang tersisa
+		document.getElementById("notif").innerHTML=sisa+"Karakter tersisa !";
+		}
+	}
+function kosongi(){
+target.readOnly=false;
+var notif=document.getElementById("notif");  
+notif.style.color="black";
+notif.innerHTML="";
+}
+</script>
+</body>
+</html>
